@@ -1,0 +1,30 @@
+/* 这是暴露出去的注释 */
+// 这是见不得人的注释
+//定义变量 
+//变量都是延迟加载的 变量是块级作用域
+// 混合的定义在less规则中有明确的指定，使用.的形式来定义
+@color:pink;
+* {
+    padding: 0;
+    margin: 0;
+}
+.wrap {
+    position: relative;
+    width: 300px;
+    height: 500px;
+    border: 1px solid #333;
+    margin: auto;
+    .inner {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+        background-color: @color;
+        //表示当前选择器
+        &:hover{
+            background-color: blue;
+        }
+    }
+}
